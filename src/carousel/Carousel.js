@@ -1,16 +1,18 @@
+import { Animated, Easing, FlatList, I18nManager, Platform, ScrollView, View } from 'react-native';
 import React, { Component } from 'react';
-import { Animated, Easing, FlatList, I18nManager, Platform, ScrollView, View, ViewPropTypes } from 'react-native';
-import PropTypes from 'prop-types';
-import shallowCompare from 'react-addons-shallow-compare';
 import {
-    defaultScrollInterpolator,
-    stackScrollInterpolator,
-    tinderScrollInterpolator,
     defaultAnimatedStyles,
+    defaultScrollInterpolator,
     shiftAnimatedStyles,
     stackAnimatedStyles,
-    tinderAnimatedStyles
+    stackScrollInterpolator,
+    tinderAnimatedStyles,
+    tinderScrollInterpolator
 } from '../utils/animations';
+
+import PropTypes from 'prop-types';
+import { ViewPropTypes } from 'deprecated-react-native-prop-types';
+import shallowCompare from 'react-addons-shallow-compare';
 
 const IS_IOS = Platform.OS === 'ios';
 
